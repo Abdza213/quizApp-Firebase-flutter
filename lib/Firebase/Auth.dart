@@ -23,7 +23,7 @@ class Auth with ChangeNotifier {
       required String password,
       required String urlSegment}) async {
     final String urlApi =
-        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=AIzaSyBvuqKEWjniZ82g6yzlBP35WWK1hAtyTI4';
+        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=$FirebaseAppKey';
 
     try {
       http.Response res = await http.post(
